@@ -26,7 +26,6 @@ router.post('/api/notes', (req, res) => {
         writeToFile('./db/db.json', JSON.stringify(dbData));
         }
     })
-
     
 });
 
