@@ -21,10 +21,8 @@ router.post('/notes', (req, res) => {
         if (err) {
             console.error(err);
         } else {
-            console.log(newNote);
             const dbData = JSON.parse(data);
             dbData.push(newNote);
-            console.log(dbData);
             return writeToFile('./db/db.json', dbData);
         }
     });
@@ -32,15 +30,12 @@ router.post('/notes', (req, res) => {
 
 router.delete('/notes/:id', (req, res) => {
     let noteID = req.params.id;
-    
-    console.log(noteID);
 
     fs.readFile('./db/db.json', 'utf8', (err, data)=> {
         if (err) {
             console.error(err);
         } else {
         var dbData = JSON.parse(data);
-        console.log(dbData);
         dbData = dbData.filter(dbData => dbData.id !== noteID);
         return writeToFile('./db/db.json', dbData);
         }
