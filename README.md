@@ -19,11 +19,11 @@ This application uses express to create api routes to read and write to a JSON f
   
 ## Installation
 
-Navigate to this application in terminal and run command 'npm install'
+Clone this repository, navigate to this application in terminal, then run command 'npm install'
 
 ## Usage
 
-This application has been deployed on heroku at https://note-taker-expressjs-vyang.herokuapp.com/
+To use locally, Navigate to this application in terminal run command 'node server.js' and navigate to localhost:3045 in your browser. Otherwise, this application has been deployed on heroku at https://note-taker-expressjs-vyang.herokuapp.com/
 
 ![Preview](./public/assets/images/preview1.png)
 

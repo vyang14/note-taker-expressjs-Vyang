@@ -3,7 +3,7 @@ const express = require('express');
 const routes = require('./controllers');
 
 const app = express();
-const PORT = 3001;
+const PORT = 3045;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
