@@ -1,11 +1,10 @@
-// const router = require('express').Router();
-// const fs = require('fs');
-// const path = require('path');
-// const { get } = require('./api');
+const path = require('path');
+const router = require('express').Router();
 
+router.get('/notes', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/notes.html'));
+});
 
-// router.get('/', async (req, res) => {
-//     readFromFile()
-// })
-
-// router.get('*', )
+router.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
+});
