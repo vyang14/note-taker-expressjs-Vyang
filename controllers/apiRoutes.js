@@ -2,7 +2,7 @@ const fs = require('fs');
 const express = require('express');
 const router = express();
 const path = require('path');
-const { readFromFile, writeToFile, readAndAppend } = require('../helpers/fsUtils')
+const { readFromFile, writeToFile, readAndAppend } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 
 router.get('/notes', (req, res) => {
@@ -27,7 +27,7 @@ router.post('/notes', (req, res) => {
         console.log(dbData);
         return writeToFile('./db/db.json', dbData);
         }
-    })
+    });
 });
 
 router.delete('/notes/:id', (req, res) => {
@@ -45,14 +45,6 @@ router.delete('/notes/:id', (req, res) => {
         return writeToFile('./db/db.json', dbData);
         }
     });
-});
-
-router.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/notes.html'));
-  });
-  
-router.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 module.exports = router;
