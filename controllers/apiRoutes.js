@@ -21,11 +21,11 @@ router.post('/notes', (req, res) => {
         if (err) {
             console.error(err);
         } else {
-        console.log(newNote);
-        const dbData = JSON.parse(data);
-        dbData.push(newNote);
-        console.log(dbData);
-        return writeToFile('./db/db.json', dbData);
+            console.log(newNote);
+            const dbData = JSON.parse(data);
+            dbData.push(newNote);
+            console.log(dbData);
+            return writeToFile('./db/db.json', dbData);
         }
     });
 });
