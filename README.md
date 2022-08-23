@@ -2,17 +2,13 @@
 
 ## Table of Contents
 
-* [Licensing](#licensing)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contribution](#contribution)
 * [Test](#test)
 * [Questions](#questions)
 
-## Licensing 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-> note-taker_expressjs is protected and licensed under the [MIT](https://opensource.org/licenses/MIT) license.
-
+ 
 ## Description
 
 This application uses express to create api routes to read and write to a JSON file used as a database for storing and pulling notes.
